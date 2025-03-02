@@ -13,11 +13,11 @@ async function listInvoices() {
 	return data;
 }
 
-async function dropTables() {
-  await sql`
-    DROP TABLE
-  `;
-}
+// async function dropTables() {
+//   await sql`
+//     DROP TABLE
+//   `;
+// }
 
 export async function GET() {
   // return Response.json({

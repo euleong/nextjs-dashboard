@@ -4,7 +4,7 @@ import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 import { lusitana } from '@/app/ui/fonts';
 import { fetchCardData } from '@/app/lib/data';
 import { Suspense } from 'react';
-import { CardSkeleton, CardsSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from '@/app/ui/skeletons';
+import { CardSkeleton, LatestInvoicesSkeleton, RevenueChartSkeleton } from '@/app/ui/skeletons';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-    const {numberOfCustomers, numberOfInvoices, totalPaidInvoices, totalPendingInvoices,} = await fetchCardData();
+    // const {numberOfCustomers, numberOfInvoices, totalPaidInvoices, totalPendingInvoices,} = await fetchCardData();
     return (
         <main>
             <h1 className={`${lusitana.className} mb-4 text-xl md:test-2xl`}>
